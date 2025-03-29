@@ -7,5 +7,7 @@ import { productsList } from './products.mock';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
-
+  
+  productsList = productsList;
+  
 }
