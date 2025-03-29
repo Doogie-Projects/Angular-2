@@ -2,4 +2,4 @@
 
 <p [ngStyle]="{'background-color': product?.color}">Aqui esta el producto: {{product?.name}}</p>
 <p [ngStyle]="{'background-color': product?.color}">Aqui esta el precio: {{product?.price | currency}}</p>
-<p [ngStyle]="{'background-color': product?.color}">Aqui esta el descripción: {{product?.description}}</p>
+<p [ngStyle]="{'background-color': product?.color}" *ngIf="product?.description">Aqui esta el descripción: {{product?.description}}</p>
