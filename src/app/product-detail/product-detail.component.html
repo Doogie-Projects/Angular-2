@@ -1,1 +1,5 @@
-<p [ngStyle]="{'background-color': color}">Aqui esta el producto: {{producto}}</p>
+<p [ngStyle]="{'background-color': product?.color}">Aqui esta el color: {{product?.color}}</p>
+
+<p [ngStyle]="{'background-color': product?.color}">Aqui esta el producto: {{product?.name}}</p>
+<p [ngStyle]="{'background-color': product?.color}">Aqui esta el precio: {{product?.price | currency}}</p>
+<p [ngStyle]="{'background-color': product?.color}">Aqui esta el descripción: {{product?.description}}</p>
