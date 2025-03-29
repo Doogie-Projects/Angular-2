@@ -3,7 +3,7 @@
     <p [ngStyle]="{'background-color': product?.color}">Aqui esta el color: {{product?.color}}</p>
 
     <p [ngStyle]="{'background-color': product?.color}">Aqui esta el producto: {{product?.name}}</p>
-    <p [ngStyle]="{'background-color': product?.color}">Aqui esta el precio: {{product?.price | currency}}</p>
+    <p [ngStyle]="{'background-color': product?.color, 'color': cheap}">Aqui esta el precio: {{product?.price | currency}}</p>
     <p [ngStyle]="{'background-color': product?.color}" *ngIf="product?.description">Aqui esta el descripción:
         {{product?.description}}</p>
 

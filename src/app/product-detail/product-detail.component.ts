@@ -13,6 +13,7 @@ export class ProductDetailComponent implements OnInit {
   color?: Product;
   producList: Product[] = productsList
   loading: boolean = true;
+  cheap?: string;
 
   constructor(private _route: ActivatedRoute) { }
 
@@ -25,10 +26,10 @@ export class ProductDetailComponent implements OnInit {
         this.product = this.producList.find(product => product.id == params['productId']);
         // this.color = params['category'];
         this.color = this.producList.find(product => product.color == params['category']);
-  
+        this.cheap = this.product?.price as number < 21 ? 'red' : 'green';
       });
       this.loading = false;
-    }, 1500);
+    }, 1000);
   }
 
 }
