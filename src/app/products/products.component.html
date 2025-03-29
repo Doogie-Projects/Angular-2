@@ -11,7 +11,7 @@
       <tr *ngFor="let product of productsList">
         <th scope="row">{{product.id}}</th>
         <td [ngStyle]="{'background-color': product.color}">{{product.name}}</td>
-        <td>{{product.price | currency}}</td>
+        <td [ngClass]="{'low-price': product.price < 30}">{{product.price | currency}}</td>
         <button type="button" class="btn btn-outline-primary" [routerLink]="['/products', product.color, product.id]">Ver</button>
       </tr>
     </tbody>
