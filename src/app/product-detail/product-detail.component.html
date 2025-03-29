@@ -1,5 +1,12 @@
-<p [ngStyle]="{'background-color': product?.color}">Aqui esta el color: {{product?.color}}</p>
+<ng-container *ngIf="!loading">
 
-<p [ngStyle]="{'background-color': product?.color}">Aqui esta el producto: {{product?.name}}</p>
-<p [ngStyle]="{'background-color': product?.color}">Aqui esta el precio: {{product?.price | currency}}</p>
-<p [ngStyle]="{'background-color': product?.color}" *ngIf="product?.description">Aqui esta el descripción: {{product?.description}}</p>
+    <p [ngStyle]="{'background-color': product?.color}">Aqui esta el color: {{product?.color}}</p>
+
+    <p [ngStyle]="{'background-color': product?.color}">Aqui esta el producto: {{product?.name}}</p>
+    <p [ngStyle]="{'background-color': product?.color}">Aqui esta el precio: {{product?.price | currency}}</p>
+    <p [ngStyle]="{'background-color': product?.color}" *ngIf="product?.description">Aqui esta el descripción:
+        {{product?.description}}</p>
+
+</ng-container>
+
+<ng-container *ngIf="loading"><i>CARGANDO INFORMACIÓN ... </i></ng-container>

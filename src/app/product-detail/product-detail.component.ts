@@ -12,18 +12,23 @@ export class ProductDetailComponent implements OnInit {
   product?: Product;
   color?: Product;
   producList: Product[] = productsList
+  loading: boolean = true;
 
   constructor(private _route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this._route.params.subscribe(params => {
-      // console.log(params['productId']);
-      // this.product = params['productId'];
-      this.product = this.producList.find(product => product.id == params['productId']);
-      // this.color = params['category'];
-      this.color = this.producList.find(product => product.color == params['category']);
 
-    });
+    setTimeout(() => {
+      this._route.params.subscribe(params => {
+        // console.log(params['productId']);
+        // this.product = params['productId'];
+        this.product = this.producList.find(product => product.id == params['productId']);
+        // this.color = params['category'];
+        this.color = this.producList.find(product => product.color == params['category']);
+  
+      });
+      this.loading = false;
+    }, 1500);
   }
 
 }
