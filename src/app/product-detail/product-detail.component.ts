@@ -29,7 +29,7 @@ export class ProductDetailComponent implements OnInit {
         this.cheap = this.product?.price as number < 21 ? 'red' : 'green';
       });
       this.loading = false;
-    }, 1000);
+    }, 500);
   }
 
 }
