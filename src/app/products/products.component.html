@@ -1,4 +1,5 @@
-<table class="table">
+<div class="container">
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -12,7 +13,11 @@
         <th scope="row">{{product.id}}</th>
         <td [ngStyle]="{'background-color': product.color}">{{product.name}}</td>
         <td [ngClass]="{'low-price': product.price < 30}">{{product.price | currency}}</td>
-        <button type="button" class="btn btn-outline-primary" [routerLink]="['/products', product.color, product.id]">Ver</button>
+        <td class="d-flex justify-content-center">
+          <button type="button" class="btn btn-outline-primary"
+          [routerLink]="['/products', product.color, product.id]">Ver</button>
+          </td>
       </tr>
     </tbody>
   </table>
+</div>
