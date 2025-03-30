@@ -9,6 +9,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductsAPIComponent } from './products-api/products-api.component';
+import { ProductAPIDetailComponent } from './product-api-detail/product-api-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ProductsComponent,
     ContactComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductsAPIComponent,
+    ProductAPIDetailComponent
   ],
   imports: [
     BrowserModule,
