@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="./src/assets/Screenshot from 2025-03-30 22-22-29.png" width="400">
+</p>
 # Angular2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
